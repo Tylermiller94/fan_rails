@@ -1,0 +1,10 @@
+<h1>Welcome to ULTIMATE anime database</h1>
+
+<h2>Your #1 Source for <em>the</em> best girls</h2>
+<ul>
+  <% @subgenres.each do |subgenre| %>
+    <li> <%= link_to subgenre.name, subgenre_path(subgenre) %> </li>
+  <% end %>
+</ul>
+
+<p> <%= link_to "Add new Subgenre", new_subgenre_path %> </p>

@@ -1,0 +1,9 @@
+<%= render 'layouts/errors', :object => @subgenre %>
+
+<%= form_for @subgenre do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control"%>
+  </div>
+  <%= f.submit class: "btn-primary" %>
+<% end %>
