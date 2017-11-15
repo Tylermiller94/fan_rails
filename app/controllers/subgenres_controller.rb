@@ -18,7 +18,21 @@ class SubgenresController < ApplicationController
       flash[:notice] = "Subgenre has been created!"
       redirect_to subgenres_path
     else
-      render:new
+      render :new
+    end
+  end
+
+  def edit
+    @subgenre = Subgenre.find(params[:id])
+  end
+
+  def update
+    @subgenre = Subgenre.find(params[:id])
+    if @subgenre.update(subgenre_params)
+      flash[:notice] = "The Subgenre has been updated!"
+      redirect_to subgenres_path
+    else
+      render :edit
     end
   end
 
