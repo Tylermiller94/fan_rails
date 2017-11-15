@@ -36,6 +36,12 @@ class SubgenresController < ApplicationController
     end
   end
 
+  def destroy
+    @subgenre = Subgenre.find(params[:id])
+    @subgenre.destroy
+    redirect_to subgenres_path
+  end
+
 
 
 

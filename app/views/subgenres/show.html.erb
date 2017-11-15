@@ -1,3 +1,7 @@
 <h1>All <%= @subgenre.name %> Anime </h1>
 
+<p> <%= link_to "Delete", subgenre_path(@subgenre),
+                    :data => {:confirm => "You sure?",
+                              :method => "delete"} %></p>
+
 <p> <%= link_to "Back to All Subgenres", subgenres_path %> </p>
